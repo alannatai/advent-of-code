@@ -1,5 +1,4 @@
-const fs = require('fs');
-const array = fs.readFileSync('input.txt').toString().split('\n').map(num => parseInt(num));
+const { array } = require('./constants/constants');
 
 const run = (arr) => {
   let dict = {};
