@@ -18,9 +18,9 @@ const runPt2 = (arr, total) => {
   for (let i = 0; i < arr.length; i++) {
     const num = arr[i];
     const remainder = total - num;
-    const mult = run(arr, remainder);
-    if(mult) {
-      return mult * num
+    const product = run(arr, remainder);
+    if(product) {
+      return product * num
     }
   }
 }
