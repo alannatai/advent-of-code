@@ -1,10 +1,10 @@
 const { array } = require('./constants/constants');
 
-const run = (arr) => {
-  let dict = {};
+const run = (arr, total) => {
+  const dict = {};
   for (let i = 0; i < arr.length; i++) {
-    let num = arr[i];
-    let remainder = 2020 - num;
+    const num = arr[i];
+    const remainder = total - num;
     dict[num] = remainder
     if(dict[remainder]) {
       return dict[remainder] * remainder
@@ -12,5 +12,17 @@ const run = (arr) => {
   }
 };
 
-console.log(array);
-console.log(run(array));
+console.log(run(array, 2020));
+
+const runPt2 = (arr, total) => {
+  for (let i = 0; i < arr.length; i++) {
+    const num = arr[i];
+    const remainder = total - num;
+    const mult = run(arr, remainder);
+    if(mult) {
+      return mult * num
+    }
+  }
+}
+
+console.log(runPt2(array, 2020));
