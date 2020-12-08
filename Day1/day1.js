@@ -5,9 +5,9 @@ const run = (arr, total) => {
   for (let i = 0; i < arr.length; i++) {
     const num = arr[i];
     const remainder = total - num;
-    dict[num] = remainder
-    if(dict[remainder]) {
-      return dict[remainder] * remainder
+    dict[num] = remainder;
+    if (dict[remainder]) {
+      return dict[remainder] * remainder;
     }
   }
 };
@@ -19,10 +19,10 @@ const runPt2 = (arr, total) => {
     const num = arr[i];
     const remainder = total - num;
     const product = run(arr, remainder);
-    if(product) {
-      return product * num
+    if (product) {
+      return product * num;
     }
   }
-}
+};
 
 console.log(runPt2(array, 2020));
