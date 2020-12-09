@@ -1,4 +1,4 @@
-const { array } = require('./constants/constants');
+const { input } = require('./constants/constants');
 
 const run = (arr, total) => {
   const dict = {};
@@ -12,7 +12,7 @@ const run = (arr, total) => {
   }
 };
 
-console.log(run(array, 2020));
+console.log(run(input, 2020));
 
 const runPt2 = (arr, total) => {
   for (let i = 0; i < arr.length; i++) {
@@ -25,4 +25,4 @@ const runPt2 = (arr, total) => {
   }
 };
 
-console.log(runPt2(array, 2020));
+console.log(runPt2(input, 2020));
