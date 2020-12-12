@@ -28,7 +28,7 @@ const run = (array) => {
 
 console.log(run(input));
 
-const runpt2 = (array) => {
+const runPt2 = (array) => {
   let validCount = 0;
   const policies = getFormattedPolicies(array);
   policies.map(({ password, nums, letter }) => {
@@ -45,4 +45,4 @@ const runpt2 = (array) => {
   return validCount;
 };
 
-console.log(runpt2(input));
+console.log(runPt2(input));
